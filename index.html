@@ -11,7 +11,9 @@
 
 		button {
 			padding: 15px 20px 15px 20px;
-			align-self: 
+			border: 5px ridge;
+			background-color: rgb(255, 204, 102);
+			
 		}
 
 		
@@ -31,26 +33,35 @@
 		.pageSelect {
 			width:150px;
 			height:50px;
-			transition: width 1s, height 2s;
+			
 			position: absolute;
-			background-color: gray;
+			background-color: lightyellow;
 			padding: 10px 10px 10px 10px;
+			opacity: 50%;
 			
 		}
-		.pageSelect select {
-			display: none;
-		}
+		
 
 		.pageSelect:hover {
 			width:250px;
 			height: 500px;
 		}
 
-		#head {
+		.head {
 			width: 100%;
-			position: fixed;
-			background-color: white;
+			height: 150px;
+			background-color: #cc9900;
 			padding-bottom: 10px;
+			padding-top: 15px;
+			transition: height 1s;
+		}
+
+		.head:hover {
+			height: 250px;
+		}
+
+		.head select {
+			display: none;
 		}
 
 		.spacer {
@@ -76,7 +87,7 @@
 <body style="background-color: powderblue;">
 
 
-<div id="head">
+<div class="head" onmouseover="showButtons()">
 	<h1>
 		James Hickey
 	</h1>
@@ -84,9 +95,6 @@
 		Digital Artist, Game Developer, etc.
 	</h2>
 
-</div>
-
-<div class="pageSelect" onmouseover="dropdownMenu()">
 	<select class="custom-select">
 		<option value="0">Homepage</option>
 		<option value="1">My Name Jame</option>
@@ -95,16 +103,14 @@
 
 	</select>
 
-	<button title="Menu Select">Menu Select</button>	
-</div>	
-
-
-<div class="spacer">
 </div>
 
 
 
-
+<img id="image" src="lah.png" class="image"/>
+<img id="image" src="lah.png" class="image"/>
+<img id="image" src="lah.png" class="image"/>
+<img id="image" src="lah.png" class="image"/>
 <img id="image" src="lah.png" class="image"/>
 
 
