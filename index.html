@@ -6,6 +6,7 @@
 		body {
 			text-align: center;
 			margin: 0px;
+			background-image: ;
 		}
 
 		button {
@@ -36,6 +37,9 @@
 			padding: 10px 10px 10px 10px;
 			
 		}
+		.pageSelect select {
+			display: none;
+		}
 
 		.pageSelect:hover {
 			width:250px;
@@ -58,8 +62,10 @@
 	</style>
 
 	<script>
-
-
+		
+		function dropdownMenu() {
+			
+		}
 		
 
 	</script>
@@ -80,7 +86,15 @@
 
 </div>
 
-<div class="pageSelect">
+<div class="pageSelect" onmouseover="dropdownMenu()">
+	<select class="custom-select">
+		<option value="0">Homepage</option>
+		<option value="1">My Name Jame</option>
+		<option value="2">Portfolio</option>
+		<option value="3">Contact Jame</option>
+
+	</select>
+
 	<button title="Menu Select">Menu Select</button>	
 </div>	
 
@@ -93,9 +107,7 @@
 
 <img id="image" src="lah.png" class="image"/>
 
-<button>
-	Portfolio
-</button>
+
 
 
 
