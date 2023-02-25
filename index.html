@@ -77,13 +77,18 @@
 			width: 100%;
 			height: 150px;
 		}
+
+		.right {
+			text-align: right;
+			margin-right: 70px;
+		}
 		
 
 	</style>
 
 	<script>
-		
-		function dropdownMenu() {
+		var dynamicImage = document.getElementsByClassName("titleImage");
+		function changeImage() {
 			
 		}
 		
@@ -99,10 +104,10 @@
 <div class="head" onmouseover="showButtons()">
 	<h2 style= "font-size: 50px">Welcome to</h2>
 	<h1 style="font-size: 90px">
-		James Hickey's Internet Webpage
+		J. H. G. H's Internet Webpage
 	</h1>
 	<h2>
-		subtitle
+		Artist, Programmer, Game Developer and Engineer
 	</h2>
 
 	
@@ -110,19 +115,20 @@
 	<br>
 
 
-	<button value="0" class="menuButton" onclick="window.location.href = 'about-me.html';">About the Jamer</button>
+	<button value="0" class="menuButton" onclick="window.location.href = 'about-me.html';">About Me</button>
 	<button value="1" class="menuButton" onclick="window.location.href = 'portfolio.html';">Portfolio</button>
-	<button value="2" class="menuButton" onclick="window.location.href = 'contact-me.html';">Contact Jamer</button>
+	<button value="2" class="menuButton" onclick="window.location.href = 'contact-me.html';">Contact Me</button>
 
 </div>
 
 
+<h1 class="right" style="font-size: 50px">
+	I'm james.
+</h1>
 
-<img id="image" src="lah.png" class="image"/>
-<img id="image" src="lah.png" class="image"/>
-<img id="image" src="lah.png" class="image"/>
-<img id="image" src="lah.png" class="image"/>
-<img id="image" src="lah.png" class="image"/>
+
+<img class="titleImage" src="">
+
 
 
 
