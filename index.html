@@ -79,19 +79,30 @@
 		}
 
 		.right {
-			position: relative;
+			position: absolute;
+			top: 0;
 			text-align: right;
 			margin-right: 70px;
 			color: #cc7308;
 			margin-left: 800px;
+		}
+		.left {
+			height: 800px;
+			text-align: left;
+			overflow: hidden;
+			position:relative;
 		}
 		
 
 	</style>
 
 	<script>
-		var dynamicImage = document.getElementsByClassName("titleImage");
+		const images = new Array("lah.png", "image.jpg");
 		function changeImage() {
+			var dynamicImage = document.getElementById("titleImage");
+			var random = Math.floor(Math.random()*2);
+			dynamicImage.src = images[random];
+			console.log(random);
 			
 		}
 		
@@ -104,7 +115,7 @@
 <body style="background-color: #013257;">
 
 
-<div class="head" onmouseover="showButtons()">
+<div class="head">
 	<h2 style= "font-size: 50px">Welcome to</h2>
 	<h1 style="font-size: 90px">
 		J. H. G. H's Internet Webpage!!
@@ -125,16 +136,15 @@
 </div>
 
 <div class="left">
-	<img class="titleImage" src="lah.png" style="size: 10;">
+	<img id="titleImage" src="lah.png" onmouseover="changeImage()" width=50% >
+
+
+	<div class="right">
+		<h1 style="font-size: 50px" style="color: white;">
+		i'm james. i like to draw, code, and make interesting things.
+		</h1>
+	</div>
 </div>
-
-<div class="right" style="background-color: yellow;">
-<h1 style="font-size: 50px" style="color: white;">
-	i'm james. i like to draw, code, and make interesting things.
-</h1>
-</div>
-
-
 
 
 
