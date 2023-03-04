@@ -86,25 +86,23 @@
 			margin-left: 50%;
 		}
 		.left {
-			height: max-content;
+			height: 15em;
 			text-align: left;
 			overflow: hidden;
 			position:relative;
+		} 	
+
+		.images {
+			margin: 0 auto;
+			overflow: hidden;
+			position: relative;
 		}
 		
 
 	</style>
 
 	<script>
-		const images = new Array("lah.png", "image.jpg");
-		function changeImage() {
-			var dynamicImage = document.getElementById("titleImage");
-			var random = Math.floor(Math.random()*2);
-			dynamicImage.src = images[random];
-			console.log(random);
-			
-		}
-		
+
 
 	</script>
 
@@ -135,8 +133,9 @@
 </div>
 
 <div class="left">
-	<img id="titleImage" src="lah.png" onmouseover="changeImage()" width=50% >
+	<div class="images">
 
+	</div>
 
 	<div class="right">
 		<h1 style="font-size: 50px" style="color: white;">
