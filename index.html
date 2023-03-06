@@ -97,16 +97,7 @@
 			position: relative;
 
 		} 	
-
-		.left img {
-			height: 500px;
-			object-fit: scale-down;
-			position: fixed;
-			margin-top: 0;
-			overflow:hidden;
-
-		}
-
+		
 		
 
 	</style>
@@ -118,8 +109,8 @@
 			for (let i = 0; i <= image_stack.length - 1; i++) {
 				var img = document.createElement("img")
 				img.src = image_stack[i];
+				img.style.cssText += "height: 500px;object-fit: scale-down;position:absolute;margin-top: 0;overflow:hidden";
 				document.getElementById("images").appendChild(img);
-
 			}
 
 			function changeSlide() {
@@ -161,7 +152,7 @@
 </div>
 
 <div class="left">
-	<div id="images">
+	<div id="images" style="background-color: yellow;">
 
 
 	</div>
