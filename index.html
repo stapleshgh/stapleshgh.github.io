@@ -85,11 +85,11 @@
 			text-align: right;
 			color: #cc7308;
 			margin-left: 40%;
-			margin-right: 15px;
+			margin-right: 20px;
 
 		}
 		.left {
-			height: 500px;
+			height: 600px;
 			width: auto;
 			text-align: left;
 			align-content: left;
@@ -97,43 +97,34 @@
 			position: relative;
 
 		} 	
-		
+		#images {
+			padding: 20px;
+			width:40%;
+			margin-left: 80px;	
+			background-color: yellow;
+			position: absolute;
+			height:600px;
+		}
 		
 
 	</style>
 
 	<script>
 		const image_stack = new Array("images/lah.png", "images/image.jpg");
-
-		function imageLoader() {
-			for (let i = 0; i <= image_stack.length - 1; i++) {
-				var img = document.createElement("img")
-				img.src = image_stack[i];
-				img.style.cssText += "height: 500px;object-fit: scale-down;position:absolute;margin-top: 0;overflow:hidden";
-				document.getElementById("images").appendChild(img);
-			}
-
-			
-
-			window.setInterval(changeSlide(), 1000);
+		function loadDisplay(){
+			var img = document.getElementById("imageScroller");
+			img.src=image_stack[]
 		}
 
-		function changeSlide() {
-			for (let i = 0; i <= image_stack.length - 1; i++) {
-				
 
 
-
-					
-			}
-		}
 
 	</script>
 
 </head>
 
 
-<body id="body" style="background-color: #013257;" onload='imageLoader()'>
+<body id="body" style="background-color: #013257;">
 
 
 <div class="head">
@@ -157,8 +148,9 @@
 </div>
 
 <div class="left">
-	<div id="images" style="background-color: yellow;">
+	<div id="images">
 
+		<img id="imageScroller" onload='loadDisplay()'>
 
 	</div>
 
