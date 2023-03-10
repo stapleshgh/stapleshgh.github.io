@@ -12,9 +12,10 @@
 		button {
 			padding: 25px 30px 25px 30px;
 			border: 5px ridge;
-			background-color: rgb(255, 204, 102);
+			background-color: #cc7308;
 			font-family: Courier, monospace;
 			font-size: 13px;
+			border-color: #013257;
 		}
 
 		
@@ -36,7 +37,7 @@
 		.head {
 			width: 100%;
 			height: fit-content;
-			background-color: #cc7308;
+			background-color: black;
 			padding-bottom: 20px;
 			padding-top: 15px;
 			transition: height 2s;
@@ -83,8 +84,8 @@
 			top: 0;
 			right: 0;
 			text-align: right;
-			color: #cc7308;
-			margin-left: 40%;
+			color: black;
+			margin-left: 50%;
 			margin-right: 20px;
 
 		}
@@ -100,22 +101,38 @@
 		#images {
 			padding: 20px;
 			width:40%;
-			margin-left: 80px;	
-			background-color: yellow;
+			height: 550px;
 			position: absolute;
-			height:600px;
+			text-align: center;
+			object-fit: scale-down;
+			background-color: #013257;
+		}
+		#imageScroller {
+			object-fit: scale-down;
 		}
 		
 
 	</style>
 
 	<script>
-		const image_stack = new Array("images/lah.png", "images/image.jpg");
+		const image_stack = new Array("images/lah2.png", "images/image.jpg");
+		var num = 0;
 		function loadDisplay(){
 			var img = document.getElementById("imageScroller");
-			img.src=image_stack[]
-		}
 
+			if (num >= image_stack.length - 1) {
+				num = 0;
+			} else {
+				num += 1;
+			}
+
+			img.src =  image_stack[num];
+			console.log(document.getElementById('images').style.objectFit);
+
+
+		
+		}
+		setInterval(loadDisplay, 2000);
 
 
 
@@ -124,15 +141,15 @@
 </head>
 
 
-<body id="body" style="background-color: #013257;">
+<body id="body" style="background-color: #cc7308;">
 
 
 <div class="head">
-	<h2 style= "font-size: 30px">Welcome to</h2>
-	<h1 style="font-size: 50px">
+	<h2 style= "font-size: 30px; color: #cc7308">Welcome to</h2>
+	<h1 style="font-size: 50px; color: #cc7308";>
 		J. H. G. H's Internet Webpage!!
 	</h1>
-	<h2>
+	<h2 style="color: #cc7308">
 		Artist, Programmer, Game Developer, Video Editor and Engineer
 	</h2>
 
@@ -148,16 +165,23 @@
 </div>
 
 <div class="left">
-	<div id="images">
+	<div id="images" style="object-fit: scale-down;">
 
-		<img id="imageScroller" onload='loadDisplay()'>
+		<img id="imageScroller" src='images/lah2.png' style="width:60%; height:550px;">
 
 	</div>
 
 	<div class="right">
-		<h1 style="font-size: 40px" style="color: white;">
+		<h1 style="font-size: 40px">
 		i'm james. i like to draw, code, and make interesting things.
 		</h1>
+		<br>
+		<h2>
+			i've been drawing and making art since i was a little kid, and i've been programming since i was 11. since then, i've fallen in love with creating, whether it be a new challenging art piece, or an app that does something stupid, or a new game idea, or a video, or anything else within my enormous range of hobbies.
+		</h2> <br>
+		<h2>
+			<--- check out some of my projects here!
+		</h2>
 	</div>
 </div>
 
