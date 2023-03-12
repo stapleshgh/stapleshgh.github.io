@@ -12,7 +12,7 @@
 			text-align: center;
 			margin: 0px;
 			font-family: Courier, monospace;
-			background-color: #cc7308;
+			background-color: black;
 		}
 
 		button {
@@ -68,8 +68,32 @@
 			background-color: white;
 		}
 
+		#center {
+			width: auto;
+			height: 500px;
+			background-color: black;
+			margin:0px;
+			padding: 0px;
+		}
+
 		#left {
-			text-align: left;
+			background-color: black;
+			width:50%; 
+			height:500px auto; 
+			text-align:center;
+			position:absolute;
+		}
+
+		#right {
+			background-color: #cc7308;
+			position: relative;
+			margin-top:0px;
+			right: 0;
+			text-align: right;
+			margin-left: 50%;
+			margin-right: 20px;
+			height:500px auto;
+
 		}
 
 	</style>
@@ -99,10 +123,54 @@
 	</h5>
 </div>
 
-<div id="left" style="background-color: black; width:50%; height:500px; text-align:center;">
-	<img src="images/jamer.png" style="width:80%; padding: 30px;">
+<div id="center">
+
+	<div id="left">
+		<img src="images/jamer.png" style="width:80%; padding: 30px;">
+	</div>
+	<div id="right" style="font-size: 40px; padding-right: 10px;">
+		<h2>
+			bio
+		</h2>
+		<h3 style="padding:15px; font-size:30px;">
+			my name is James, staples, or J.H.G.H. I'm a programmer, game developer, artist and engineer from Hamilton, Ontario, Canada. i'm currently graduating high school, and will be attending OCAD University's Digital Futures program in fall of 2023. i'm 17 years old. here's a bit about me.
+		</h3>
+
+		<br>
+	</div>
+
+
+
 </div>
 
+<div style="background-color: #0b5211; font-size: 40px; text-align: left;">
+	<h2 style=" margin-left:15px; color: #fc2d5a;">
+		art
+	</h2>
+	<h3 style="font-size: 25px; color: #fc2d5a; padding: 10px;">
+		im mainly a digital artist, but i don't let that stop me from experimenting in other mediums. most recently i've been learning watercolours and latte art. i tend to stick to a semi-cartoonish, semi-realistic style, but i want to explore more of the stylized side of my art in the future. i also mostly focus on the human form, specifically on character design and portraits. i've been learning more about environmental art and also hope to expand my skillset in that direction soon. i love rough, painterly rendering styles, and expressive faces with dynamic poses and camera angles- hopefully you can see that influence in my art.
+	</h3>
+</div>
+<div style="background-color: #fc2d5a; font-size: 40px; text-align: right;">
+	<h2 style=" margin-left:15px; color: #0b5211">
+		games
+	</h2>
+	<h3 style="font-size: 25px; color: #0b5211; padding: 10px;">
+		im a huge fan of osu!, the classic 2007 rhythm game developed by Dean "ppy" Herbert. so, it only makes sense that the first real "game" that i ever developed was a rhythm game of my own. i called it Zero Beat, and made a really rough prototype in C#'s MonoGame framework for my grade 11 computer science class. it was my first real game, with all-original code (save for some tutorials taken from youtube) and art. although the project cut my ambitions short, it was a great exercise in game development and taught me so much about C# and game design. i'm currently working on another secret project, and hope to participate in this spring's Ludum Dare 53.
+	</h3>
+</div>
+
+<div style="background-color: #cc7308; font-size: 40px; text-align: left;">
+
+	<h2 style=" margin-left:15px; color: black;">
+		engineering/tech design
+	</h2>
+
+	<h3 style="font-size: 25px; padding: 10px;">
+		blah blah blah
+	</h3>
+
+</div>
 
 </body>
 </html>
